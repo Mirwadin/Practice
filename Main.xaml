@@ -105,11 +105,7 @@
     <Flowchart.Variables>
       <Variable x:TypeArguments="ui:QueueItem" Name="TransactionItem" />
       <Variable x:TypeArguments="x:Boolean" Name="ShouldStop" />
-      <Variable x:TypeArguments="x:Int32" Name="Counter">
-        <Variable.Default>
-          <Literal x:TypeArguments="x:Int32" Value="1" />
-        </Variable.Default>
-      </Variable>
+      <Variable x:TypeArguments="x:Int32" Default="1" Name="Counter" />
     </Flowchart.Variables>
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -148,7 +144,7 @@
               <av:PointCollection x:Key="ConnectorLocation">200,258.1666666666667 100,258.1666666666667 100,273</av:PointCollection>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <If Condition="[TransactionItem isnot Nothing]" sap:VirtualizedContainerService.HintSize="530,974" sap2010:WorkflowViewState.IdRef="If_1">
+          <If Condition="[TransactionItem isnot Nothing]" sap:VirtualizedContainerService.HintSize="200,54" sap2010:WorkflowViewState.IdRef="If_1">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -179,7 +175,7 @@
                               <uix:NTypeInto.Target>
                                 <uix:TargetAnchorable BrowserURL="https://acme-test.uipath.com/bank/account" CvElementArea="537, 329, 732, 56" CvType="InputBox" DesignTimeRectangle="541, 333, 727, 51" DesignTimeScaleFactor="1.5" ElementType="InputBox" FullSelectorArgument="&lt;webctrl id='firstname' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='firstname' tag='INPUT' type='text' class='form-control' aaname='' /&gt;" Guid="668ed0b2-f214-4d12-8aa2-9a6370a771f0" InformativeScreenshot="6d0f54a604b27fb051cfe5c3439933c0.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='firefox.exe' title='ACME System 1 - Add Account' /&gt;" SearchSteps="FuzzySelector, CV" Version="V3" Visibility="Interactive">
                                   <uix:TargetAnchorable.Anchors>
-                                    <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
                                       <uix:Target CvTextArea="538, 300, 119, 19" CvTextArgument="First Name:" CvType="Text" DesignTimeRectangle="541, 296, 116, 30" ElementType="Text" FullSelectorArgument="&lt;webctrl tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='LABEL' type='' class='' aaname='First Name:' check:innerText='First Name:' /&gt;" SearchSteps="FuzzySelector, CV" />
                                     </scg:List>
                                   </uix:TargetAnchorable.Anchors>
@@ -190,7 +186,7 @@
                               <uix:NTypeInto.Target>
                                 <uix:TargetAnchorable BrowserURL="https://acme-test.uipath.com/bank/account" CvElementArea="537, 441, 734, 56" CvType="InputBox" DesignTimeRectangle="541, 444, 727, 51" DesignTimeScaleFactor="1.5" ElementType="InputBox" FullSelectorArgument="&lt;webctrl id='lastname' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='lastname' tag='INPUT' type='text' class='form-control' aaname='' /&gt;" Guid="dd152737-f188-4048-a044-80482d5bdbd1" InformativeScreenshot="6da0d355dae19c63d6b636935b8edd6b.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='firefox.exe' title='ACME System 1 - Add Account' /&gt;" SearchSteps="FuzzySelector, CV" Version="V3" Visibility="Interactive">
                                   <uix:TargetAnchorable.Anchors>
-                                    <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
                                       <uix:Target CvTextArea="540, 411, 114, 19" CvTextArgument="Last Name:" CvType="Text" DesignTimeRectangle="541, 407, 113, 30" ElementType="Text" FullSelectorArgument="&lt;webctrl aaname='Last Name:' tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Last Name:' tag='LABEL' type='' class='' check:innerText='Last Name:' /&gt;" SearchSteps="FuzzySelector, CV" />
                                     </scg:List>
                                   </uix:TargetAnchorable.Anchors>
@@ -201,7 +197,7 @@
                               <uix:NTypeInto.Target>
                                 <uix:TargetAnchorable BrowserURL="https://acme-test.uipath.com/bank/account" CvElementArea="537, 551, 735, 57" CvType="InputBox" DesignTimeRectangle="541, 555, 727, 51" DesignTimeScaleFactor="1.5" ElementType="InputBox" FullSelectorArgument="&lt;webctrl id='city-state-zip' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='city-state-zip' tag='INPUT' type='text' class='form-control' aaname='' /&gt;" Guid="a5f17d03-76ed-4360-ba34-002c340f2939" InformativeScreenshot="3c36fc24ce96dd67c70459e7e5ff1d9a.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='firefox.exe' title='ACME System 1 - Add Account' /&gt;" SearchSteps="FuzzySelector, CV" Version="V3" Visibility="Interactive">
                                   <uix:TargetAnchorable.Anchors>
-                                    <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
                                       <uix:Target CvTextArea="538, 520, 153, 24" CvTextArgument="City, State, Zip:" CvType="Text" DesignTimeRectangle="541, 518, 151, 30" ElementType="Text" FullSelectorArgument="&lt;webctrl aaname='City, State, Zip:' tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='City, State, Zip:' tag='LABEL' type='' class='' check:innerText='City, State, Zip:' /&gt;" SearchSteps="FuzzySelector, CV" />
                                     </scg:List>
                                   </uix:TargetAnchorable.Anchors>
@@ -212,7 +208,7 @@
                               <uix:NTypeInto.Target>
                                 <uix:TargetAnchorable BrowserURL="https://acme-test.uipath.com/bank/account" CvElementArea="537, 662, 733, 56" CvType="InputBox" DesignTimeRectangle="541, 666, 727, 51" DesignTimeScaleFactor="1.5" ElementType="InputBox" FullSelectorArgument="&lt;webctrl id='phone' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='phone' tag='INPUT' type='text' class='form-control' aaname='' /&gt;" Guid="94222039-f2de-4f17-a9e8-e6d65691b15f" InformativeScreenshot="5221106b2c973581f859647207049b84.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='firefox.exe' title='ACME System 1 - Add Account' /&gt;" SearchSteps="FuzzySelector, CV" Version="V3" Visibility="Interactive">
                                   <uix:TargetAnchorable.Anchors>
-                                    <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
                                       <uix:Target CvTextArea="538, 633, 73, 19" CvTextArgument="Phone:" CvType="Text" DesignTimeRectangle="541, 629, 71, 30" ElementType="Text" FullSelectorArgument="&lt;webctrl aaname='Phone:' tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Phone:' tag='LABEL' type='' class='' check:innerText='Phone:' /&gt;" SearchSteps="FuzzySelector, CV" />
                                     </scg:List>
                                   </uix:TargetAnchorable.Anchors>
@@ -223,7 +219,7 @@
                               <uix:NTypeInto.Target>
                                 <uix:TargetAnchorable BrowserURL="https://acme-test.uipath.com/bank/account" CvElementArea="538, 773, 733, 57" CvType="InputBox" DesignTimeRectangle="541, 777, 727, 51" DesignTimeScaleFactor="1.5" ElementType="InputBox" FullSelectorArgument="&lt;webctrl id='email' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='email' tag='INPUT' type='text' class='form-control' aaname='' /&gt;" Guid="674a07bc-0e1a-42c9-a91e-58c7b32704bc" InformativeScreenshot="651622105be08cd6d2e0473df7b8b721.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='firefox.exe' title='ACME System 1 - Add Account' /&gt;" SearchSteps="FuzzySelector, CV" Version="V3" Visibility="Interactive">
                                   <uix:TargetAnchorable.Anchors>
-                                    <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
                                       <uix:Target CvTextArea="538, 742, 66, 21" CvTextArgument="Email:" CvType="Text" DesignTimeRectangle="541, 740, 63, 30" ElementType="Text" FullSelectorArgument="&lt;webctrl aaname='Email:' tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Email:' tag='LABEL' type='' class='' check:innerText='Email:' /&gt;" SearchSteps="FuzzySelector, CV" />
                                     </scg:List>
                                   </uix:TargetAnchorable.Anchors>
@@ -234,7 +230,7 @@
                               <uix:NTypeInto.Target>
                                 <uix:TargetAnchorable BrowserURL="https://acme-test.uipath.com/bank/account" CvElementArea="538, 884, 732, 56" CvType="InputBox" DesignTimeRectangle="541, 888, 727, 51" DesignTimeScaleFactor="1.5" ElementType="InputBox" FullSelectorArgument="&lt;webctrl id='age' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='age' tag='INPUT' type='text' class='form-control' aaname='' /&gt;" Guid="109ee02e-c1b8-47f1-b61b-d7ff6a1864cc" InformativeScreenshot="ad94cdbe7f17a447247463f6acf70dc0.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='firefox.exe' title='ACME System 1 - Add Account' /&gt;" SearchSteps="FuzzySelector, CV" Version="V3" Visibility="Interactive">
                                   <uix:TargetAnchorable.Anchors>
-                                    <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
                                       <uix:Target CvTextArea="538, 855, 49, 22" CvTextArgument="Age:" CvType="Text" DesignTimeRectangle="541, 851, 47, 30" ElementType="Text" FullSelectorArgument="&lt;webctrl aaname='Age:' tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Age:' tag='LABEL' type='' class='' check:innerText='Age:' /&gt;" SearchSteps="FuzzySelector, CV" />
                                     </scg:List>
                                   </uix:TargetAnchorable.Anchors>
@@ -245,7 +241,7 @@
                               <uix:NTypeInto.Target>
                                 <uix:TargetAnchorable BrowserURL="https://acme-test.uipath.com/bank/account" CvElementArea="537, 995, 733, 56" CvType="InputBox" DesignTimeRectangle="541, 999, 727, 51" DesignTimeScaleFactor="1.5" ElementType="InputBox" FullSelectorArgument="&lt;webctrl id='dependents' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='dependents' tag='INPUT' type='text' class='form-control' aaname='' /&gt;" Guid="7f4f1594-0206-416a-a12d-e5908978747d" InformativeScreenshot="f762836bdaf96394ddef61a71d3780ea.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='firefox.exe' title='ACME System 1 - Add Account' /&gt;" SearchSteps="FuzzySelector, CV" Version="V3" Visibility="Interactive">
                                   <uix:TargetAnchorable.Anchors>
-                                    <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
                                       <uix:Target CvTextArea="538, 964, 240, 24" CvTextArgument="Number of Dependents:" CvType="Text" DesignTimeRectangle="541, 962, 238, 30" ElementType="Text" FullSelectorArgument="&lt;webctrl aaname='Number of Dependents:' tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Number of Dependents:' tag='LABEL' type='' class='' check:innerText='Number of Dependents:' /&gt;" SearchSteps="FuzzySelector, CV" />
                                     </scg:List>
                                   </uix:TargetAnchorable.Anchors>
@@ -347,10 +343,7 @@
                     </sap:WorkflowViewStateService.ViewState>
                   </ui:ShouldStop>
                   <FlowStep.Next>
-                    <FlowDecision x:Name="__ReferenceID3" DisplayName="Flow Decision" sap:VirtualizedContainerService.HintSize="78.66666666666667,86.66666666666667" sap2010:WorkflowViewState.IdRef="FlowDecision_1">
-                      <FlowDecision.Condition>
-                        <VisualBasicValue x:TypeArguments="x:Boolean" DisplayName="Visual basic value" ExpressionText="ShouldStop or TransactionItem is Nothing" />
-                      </FlowDecision.Condition>
+                    <FlowDecision x:Name="__ReferenceID3" Condition="[ShouldStop or TransactionItem is Nothing]" DisplayName="Flow Decision" sap:VirtualizedContainerService.HintSize="78.66666666666667,86.66666666666667" sap2010:WorkflowViewState.IdRef="FlowDecision_1">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -395,7 +388,7 @@
           <av:PointCollection x:Key="ConnectorLocation">100,107 100,127.16666666666669 -30,127.16666666666669 -30,37.166666666666686 240,37.166666666666686 240,97.16666666666669 300,97.16666666666669 300,127.16666666666667</av:PointCollection>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="200,54" sap2010:WorkflowViewState.IdRef="LogMessage_4" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;Precessing Transaction number: &quot;+Counter.ToString]">
+      <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,144.66666666666666" sap2010:WorkflowViewState.IdRef="LogMessage_4" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;Precessing Transaction numberrrrr: &quot;+Counter.ToString]">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
